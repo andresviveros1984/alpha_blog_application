@@ -1,0 +1,50 @@
+<!doctype html> <!--tells the browser which version of hmtl in this case html5-->
+<html lang="en">
+    <head>
+        <title></title>
+
+        <meta charset="utf-8" />
+
+        <style>
+            h1{
+                color:blue;
+            }
+            th{
+                color:red;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <h1>Articles listing Page</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <% @articles.each do |article|  %>
+                <tr>
+                    <td><%= article.title %></td>
+                    <td><%= article.description %></td>
+                    <td>PlaceHolder</td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+
+    </body>
+
+
+
+
+
+</html>

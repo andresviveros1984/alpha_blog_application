@@ -1,9 +1,37 @@
-<style>
-h1{
-    color:blue;
-    border:2px solid green
-}
-</style>
-<h1>Showing article details</h1>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong> <%= @article.description%></p>
+<!doctype html> <!--tells the browser which version of hmtl in this case html5-->
+
+<html lang="en">
+
+    <head>
+        <title>
+
+        </title>
+        <meta charset="utf-8" />
+        <style>
+            h1{
+                color:blue;
+                border:2px solid green
+                # padding-left:150px
+            }
+            h3{
+                color:green;
+            }
+            .link{
+                color:blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Showing article details</h1>
+         <!--if(@article.save)
+           <h3>article saved succesfully</h3>
+         end a way to print message-->
+        <p><strong>Title: </strong><%= @article.title %></p>
+        <p><strong>Description: </strong> <%= @article.description%></p>
+
+        <span class="link"><%=button_to "articles", articles_path, method: :get%> </span>
+    </body>
+
+
+</html>

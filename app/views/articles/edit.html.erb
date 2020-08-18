@@ -1,0 +1,59 @@
+<!doctype html> <!--tells the browser which version of hmtl in this case html5-->
+<html lang="en">
+    <head>
+        <title></title>
+
+        <meta charset="utf-8" />
+
+        <style>
+            h1{
+                color:green;
+                border-style :solid;
+                padding-left:50px;
+            }
+            h2{
+              color:red;
+            }
+            ul{
+              color:red;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+        <h1>Edit an article</h1>
+            
+              <% if(@article.errors.any?) %>
+                <h2>The below errors have flagged an error with your input, please check them</h2>
+                <ul>
+                    <% @article.errors.full_messages.each do |message| %>
+                      <li><%= message %> </li>
+                    <%end %>
+                </ul>
+            <% end %>
+            
+         <%= form_with(model: @article,local: true) do |f| %>
+            <p>
+              <%= f.label :title %> <br/> 
+              <%= f.text_field :title %>
+            </p>
+
+            <p>
+              <%= f.label :description %> <br/>
+              <%= f.text_area :description %>   
+            </p>
+
+            <p>
+              <%= f.submit %>
+            </p>
+         <% end %>
+
+    </body>
+
+
+
+
+
+</html>

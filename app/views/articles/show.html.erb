@@ -28,9 +28,14 @@
            <h3>article saved succesfully</h3>
          end a way to print message-->
         <p><strong>Title: </strong><%= @article.title %></p>
+
         <p><strong>Description: </strong> <%= @article.description%></p>
 
-        <span class="link"><%=button_to "articles", articles_path, method: :get%> </span>
+         <%= button_to 'Edit', edit_article_path(@article), method: :get%>
+
+         <%= button_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?" }%>
+         
+        <span class="link"><%=button_to "Return to articles", articles_path, method: :get%> </span>
     </body>
 
 

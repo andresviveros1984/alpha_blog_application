@@ -1,0 +1,31 @@
+<!doctype html> <!--tells the browser which version of hmtl in this case html5-->
+<html lang="en">
+    <head>
+        <title></title>
+
+        <meta charset="utf-8" />
+
+        <style>
+            h2{
+                color:red;
+            }
+        </style>
+    </head>
+
+
+    <body>
+      <h2>Home page</h2>
+      <%=link_to "Articles Listing", articles_path %>
+      <%=button_to "About page", about_path, method: :get%>
+
+    </body>
+
+
+
+    
+
+</html>
+
+
+
+

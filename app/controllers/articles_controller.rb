@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
     end
 
     def index
-        # binding.pry
+        # binding.pry to debug
       @articles = Article.all
     end
 

@@ -27,7 +27,7 @@
 
 
     <p>
-        <%= f.submit "sign up" %>
+        <%= f.submit(@user.new_record? ? "sign up" : "update account")%>
     </p>
     <%=button_to "Return to articles", articles_path, method: :get%>
 <% end %>

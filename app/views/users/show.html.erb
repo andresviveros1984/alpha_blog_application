@@ -1,2 +1,36 @@
+<!doctype html> <!--tells the browser which version of hmtl in this case html5-->
+<html lang="en">
+    <head>
+        <title></title>
 
-<h1><%=@user.username%>'s profile</h1>
+        <meta charset="utf-8" />
+
+        <style>
+            .title{
+                padding:30px;
+            }
+            # h3{padding:40px}
+        </style>
+    </head>
+
+
+    <body>
+
+        <h1><%=@user.username%>'s profile</h1>
+       
+        <span class="title"><%=gravatar_for @user%></span>
+         <h3>Articles</h3>   
+        <%= render 'articles/article' %>
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+

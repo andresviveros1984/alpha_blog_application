@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
+=======
+  
+>>>>>>> show-user-image
     def show
       @user = User.find(params[:id])
     end

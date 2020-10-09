@@ -32,7 +32,9 @@
 
             <tbody>
                 <% @articles.each do |article|  %>
-                    by <%= article.user.username %>
+                    <%if article.user %>
+                    by <%= link_to article.user.username, user_path(article.user) %>
+                    <%end%>
                 <tr>
                     <td><%= article.title %></td>
                     <td><%= article.description %></td>

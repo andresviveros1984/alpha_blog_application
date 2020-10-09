@@ -1,0 +1,38 @@
+<!doctype html> <!--tells the browser which version of hmtl in this case html5-->
+<html lang="en">
+    <head>
+        <title></title>
+
+        <meta charset="utf-8" />
+
+        <style>
+           
+        </style>
+    </head>
+
+
+    <body>
+
+                <h1>log In</h1>
+                    
+        <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+            <p>
+                <%= f.label :email %> <br/>
+                <%= f.email_field :email, placeholder: "enter email" %>   
+            </p>
+
+            <p>
+                <%= f.label :password %> <br/>
+                <%= f.password_field :password, placeholder: "enter a valid password" %>   
+            </p>
+            <p>
+                <%= f.submit "login" %>
+            </p>
+                
+        <% end %>
+        <%=button_to "Return to articles", articles_path, method: :get%>
+        
+
+    </body>
+
+</html>
